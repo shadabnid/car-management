@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState, use } from "react";
-import { toast } from "react-toastify";
+
 import { useRouter } from 'next/navigation';
 import Image from "next/image";
 
@@ -90,11 +90,12 @@ const ProductPage = ({ params }) => {
       const data = await response.json();
       setProduct(data.product);
       setIsEditing(!isEditing);
-      toast.success("Product updated successfully!");
+     
 
       setIsEditing(false);
     } catch (error) {
-      toast.error(`Error: ${error.message}`); 
+      console.log("error")
+     
     }
   };
 
@@ -117,13 +118,13 @@ const ProductPage = ({ params }) => {
         }
 
        
-        toast.success("Product deleted successfully!");
+
 
 
         router.push("/product-list");
 
       } catch (error) {
-        toast.error(`Error: ${error.message}`);
+       console.log("error");
       }
     }
 

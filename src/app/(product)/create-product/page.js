@@ -1,8 +1,7 @@
 'use client';
 import { useState } from 'react';
 import withAuth from '@/app/(product)/_components/WithAuth';
-import { toast, ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css'; 
+
 
 const CreateProductPage = () => {
   const [title, setTitle] = useState('');
@@ -48,7 +47,7 @@ const CreateProductPage = () => {
         console.error('Error creating product:', data.error);
       }
     } catch (error) {
-      toast.error('Error submitting form');
+
       console.error('Error submitting form:', error);
     } finally {
       setLoading(false);
@@ -58,7 +57,7 @@ const CreateProductPage = () => {
   return (
     <>
 
-      <ToastContainer />
+
 
       <form onSubmit={handleSubmit} className='h-screen px-4 py-6 flex flex-col gap-3'>
         <input
