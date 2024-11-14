@@ -73,7 +73,7 @@ const Login = () => {
   return (
     <div className=' h-screen flex flex-col justify-center items-center'>
 
-      <h2 className='font-bold text-[1.5rem] text-textColor'>Login Page</h2>
+      <h2 className='font-bold text-[1.5rem] text-textColor'>Login </h2>
       <form onSubmit={handleSubmit} className='flex flex-col gap-2'>
         <div className='flex flex-col gap-1'>
           <label>Email</label>
