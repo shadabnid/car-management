@@ -91,7 +91,7 @@ const SignUp = () => {
 
   return (
     <div className='border border-red-500 h-screen flex flex-col justify-center items-center'>
-      <h2>Sign Up</h2>
+      <h2 className='font-bold text-[1.5rem] text-textColor'>Sign Up</h2>
       <form onSubmit={handleSubmit} className='flex flex-col gap-2'>
         <div className='flex flex-col gap-1'>
           <label>Email</label>
