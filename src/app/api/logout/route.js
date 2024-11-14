@@ -23,7 +23,7 @@ export async function GET(request) {
     const email = encryptedToken.user.email;
 
 
-    cookieStore.set("authToken", "");
+    cookieStore.set("authToken:", "");
 
     const user = await User.findOne({ email: email });
 
