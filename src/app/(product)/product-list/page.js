@@ -55,7 +55,7 @@ const CarList = () => {
           {products.map((item, index) => (
             <Link href={`/product-list/${item.slug}`} key={index}>
               <li className='border border-inputBorder flex flex-col w-[18rem] h-[14rem] rounded-lg'>
-                <Image src={item.thumbnail_image || '/placeholder.png'} alt={item.title} className='w-[18rem] h-[10rem] object-cover rounded-t-lg' />
+                <Image src={item.thumbnail_image || '/placeholder.png'} alt={item.title} width={288} height={160} className='w-[18rem] h-[10rem] object-cover rounded-t-lg' />
                 <span className='text-[1.5rem] text-textColor text-center mt-1'>{item.title}</span>
               </li>
             </Link>
